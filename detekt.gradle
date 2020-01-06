@@ -1,6 +1,7 @@
 detekt {
     toolVersion = "$detekt_version"
     input = files("src/main/java")
+    config = files("${rootDir}/quality/config/custom-detekt-config.yml")
     reports {
         xml {
             enabled = true
