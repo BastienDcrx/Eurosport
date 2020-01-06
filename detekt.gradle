@@ -1,0 +1,14 @@
+detekt {
+    toolVersion = "$detekt_version"
+    input = files("src/main/java")
+    reports {
+        xml {
+            enabled = true
+            destination = file("${rootDir}/quality/reports/deteck/detekt.xml")
+        }
+        html {
+            enabled = true
+            destination = file("${rootDir}/quality/reports/deteck/detekt.html")
+        }
+    }
+}
