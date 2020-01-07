@@ -1,4 +1,4 @@
-package com.example.eurosport
+package com.b2x.eurosport
 
 import org.junit.Test
 

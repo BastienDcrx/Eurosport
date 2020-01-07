@@ -1,4 +1,4 @@
-package com.example.eurosport
+package com.b2x.eurosport
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
