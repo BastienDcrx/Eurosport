@@ -1,0 +1,22 @@
+apply plugin: 'java-library'
+
+apply plugin: 'kotlin'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+dependencies {
+    def coreDependencies = rootProject.ext.coreDependencies
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation coreDependencies.kotlin
+    implementation coreDependencies.rxKotlin
+    implementation coreDependencies.gson
+    implementation coreDependencies.okHttp
+    implementation coreDependencies.okHttpLogger
+    implementation coreDependencies.retrofit
+    implementation coreDependencies.retrofitConverter
+    implementation coreDependencies.retrofitAdapter
+
+}
