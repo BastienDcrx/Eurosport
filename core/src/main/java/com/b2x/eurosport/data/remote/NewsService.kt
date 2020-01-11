@@ -7,5 +7,5 @@ import retrofit2.http.GET
 interface NewsService {
 
     @GET("ug7oc")
-    fun getStories(): Single<NewsRemoteModel>
+    fun getNews(): Single<NewsRemoteModel>
 }
