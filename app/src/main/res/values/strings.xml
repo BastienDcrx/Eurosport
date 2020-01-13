@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Eurosport</string>
+
+    <!-- NewsFeed -->
+    <string name="story_info">"By %1$s - %2$s</string>
+    <string name="video_views_count"> %d views</string>
+
 </resources>

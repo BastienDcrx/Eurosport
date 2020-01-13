@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:api="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:background="@color/grey">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_item_news_story"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        api:cardCornerRadius="@dimen/cardview_radius"
+        api:cardElevation="@dimen/cardview_elevation"
+        tools:layout_margin="@dimen/spacing_normal">
+
+        <!-- if performance issue, use RelativeLayout with negative margin on tag textView -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_view_item_news_story_content"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/image_height_tall"
+                android:contentDescription="@null"
+                android:importantForAccessibility="no"
+                android:scaleType="centerCrop"
+                api:layout_constraintEnd_toEndOf="parent"
+                api:layout_constraintStart_toStartOf="parent"
+                api:layout_constraintTop_toTopOf="parent"
+                tools:src='@tools:sample/backgrounds/scenic' />
+
+            <TextView
+                android:id="@+id/text_view_item_news_story_tag"
+                style="@style/TagTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_normal"
+                android:layout_marginEnd="@dimen/spacing_normal"
+                api:layout_constraintBottom_toBottomOf="@id/image_view_item_news_story_content"
+                api:layout_constraintStart_toStartOf="parent"
+                api:layout_constraintTop_toBottomOf="@id/image_view_item_news_story_content"
+                tools:text="Football" />
+
+            <TextView
+                android:id="@+id/text_view_item_news_story_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_normal"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:layout_marginEnd="@dimen/spacing_normal"
+                android:textAppearance="@style/TextAppearance.Title"
+                api:layout_constraintStart_toStartOf="parent"
+                api:layout_constraintTop_toBottomOf="@+id/text_view_item_news_story_tag"
+                tools:text="Oxlade-Chamberlain, Hudson-Odoi and Stones regain England places" />
+
+            <TextView
+                android:id="@+id/text_view_item_news_story_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_view_item_news_story_title"
+                android:layout_marginStart="@dimen/spacing_normal"
+                android:layout_marginTop="@dimen/spacing_tiny"
+                android:layout_marginEnd="@dimen/spacing_normal"
+                android:layout_marginBottom="@dimen/spacing_normal"
+                android:textAppearance="@style/TextAppearance.Info"
+                api:layout_constraintBottom_toBottomOf="parent"
+                api:layout_constraintStart_toStartOf="parent"
+                api:layout_constraintTop_toBottomOf="@+id/text_view_item_news_story_title"
+                tools:text="By James Gray - 12 min ago" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
