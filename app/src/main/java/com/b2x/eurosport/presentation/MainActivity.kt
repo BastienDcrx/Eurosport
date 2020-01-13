@@ -1,8 +1,8 @@
-package com.b2x.eurosport
+package com.b2x.eurosport.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.b2x.eurosportApp.R
+import com.b2x.eurosport.R
 
 class MainActivity : AppCompatActivity() {
 
